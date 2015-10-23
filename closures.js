@@ -76,9 +76,10 @@ var first = function() {
     console.log("hello, world");
 };
 
-function second(func) {
-    return function third() {
-        return first();
+function second(x) {
+    x = first;
+    return function() {
+        return x();
     };
 }
 
