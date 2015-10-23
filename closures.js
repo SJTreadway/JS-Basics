@@ -103,7 +103,6 @@ var example = function() {
 };
 
 function fnCounter(func, n) {
-   func = example;
     for (var i = 1; i <= n; i++) {
       func();
     }
