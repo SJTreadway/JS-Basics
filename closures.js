@@ -77,9 +77,13 @@ var first = function() {
 };
 
 function second(x) {
+    y = false;
     x = first;
     return function() {
-        return x();
+        if (!y) {
+            y = true;
+            return x();
+        }
     };
 }
 
