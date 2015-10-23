@@ -98,19 +98,17 @@ third();
 /*
   Now, similar to the last problem, write a function called 'fnCounter' that accepts two parameters. The first parameter will be an anonymous function and the second parameter, 'N', will be a number. Now, in 'fnCounter', allow the anonymous funciton to be invoked 'N' number of times. After it's been invoked 'N' number of times, return 'STOP'.
 */
-function fnCounter(x, n) {
+var example = function() {
+  console.log('hello, world');
+};
+
+function fnCounter(func, n) {
+   func = example;
     for (var i = 1; i <= n; i++) {
-        x;
+      func();
     }
     return "STOP";
 }
-
-function test() {
-    return "hello, world";
-}
-
-fnCounter(test(), 2);
-
 
 //Next Problem
 
