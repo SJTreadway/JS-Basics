@@ -161,28 +161,12 @@ fnCounter(test(), 2);
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
 
-var funcArray = [a,b,c,d,e,f];
-
-function a() {
-    return 0;
-}
-
-function b() {
-    return 1;
-}
-
-function c() {
-    return 2;
-}
-
-function d() {
-    return 3;
-}
-
-function e() {
-    return 4;
-}
-
-function f() {
-    return 5;
+var funcArray = [];
+var func = function (num) {
+  return (function() { 
+    return num;
+  });
+ };
+for (var i = 0; i < 6; i++) {
+ funcArray.push(func(i));
 }
