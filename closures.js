@@ -10,11 +10,11 @@ var outer = function(){
 //Invoke outer saving the return value into another variable called 'inner'.
 
   //Code Here
-
+  var inner = outer();
 //Once you do that, invoke inner.
 
   //Code Here
-
+  inner();
 
 
 //Next problem
@@ -33,8 +33,8 @@ var callFriend = function(){
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
-
-
+  callF = callFriend();
+  callF('435-215-9248');
 
 //Next Problem
 
@@ -45,6 +45,16 @@ var callFriend = function(){
 */
 
   //Code Here
+  function makeCounter() {
+    var i = 0;
+    return function count() {
+      i++;
+      return i;
+    }
+  }
+
+
+
   var count = makeCounter();
   count() // 1
   count() // 2
@@ -62,7 +72,18 @@ var callFriend = function(){
 */
 
   //Code Here
+var first = function() {
+    console.log("hello, world");
+};
 
+function second(func) {
+    return function third() {
+        return first();
+    };
+}
+
+third = second();
+third();
 
 
 //Next Problem
@@ -72,7 +93,18 @@ var callFriend = function(){
 /*
   Now, similar to the last problem, write a function called 'fnCounter' that accepts two parameters. The first parameter will be an anonymous function and the second parameter, 'N', will be a number. Now, in 'fnCounter', allow the anonymous funciton to be invoked 'N' number of times. After it's been invoked 'N' number of times, return 'STOP'.
 */
+function fnCounter(x, n) {
+    for (var i = 1; i <= n; i++) {
+        x;
+    }
+    return "STOP";
+}
 
+function test() {
+    return "hello, world";
+}
+
+fnCounter(test(), 2);
 
 
 //Next Problem
@@ -91,20 +123,26 @@ var callFriend = function(){
   Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
 
     //Answer Here
-
+  console.log 1,2,3,4,5
 
   Now, run the function in your console and note what happpens.
 
   Was your answer right or wrong?
 
     //Answer Here
-
+  Wrong
 
   Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
 */
 
     //Code Here
-
+  var counter = function(){
+    for (var i=1; i<=5; i++) {
+        console.log( i );
+    }
+  };
+ 
+counter();
 
 
 //Next Problem
