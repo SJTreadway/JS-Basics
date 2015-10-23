@@ -142,7 +142,6 @@ fnCounter(test(), 2);
     }
   };
  
-counter();
 
 
 //Next Problem
@@ -162,4 +161,28 @@ counter();
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
 
+var funcArray = [a,b,c,d,e,f];
 
+function a() {
+    return 0;
+}
+
+function b() {
+    return 1;
+}
+
+function c() {
+    return 2;
+}
+
+function d() {
+    return 3;
+}
+
+function e() {
+    return 4;
+}
+
+function f() {
+    return 5;
+}
