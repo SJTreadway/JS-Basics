@@ -34,7 +34,7 @@ var callFriend = function(){
 
   //Code Here
   var callF = callFriend();
-  callF('435-215-9248');
+  callF(435-215-9248);
 
 //Next Problem
 
